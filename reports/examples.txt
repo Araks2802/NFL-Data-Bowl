@@ -1,0 +1,27 @@
+========================================================================
+SELECTED DEMONSTRATION PLAYS (queried & verified from the dataset)
+========================================================================
+
+--- 1. CLEAN POCKET (completion): game 2021103101 play 338 ---
+  desc: (10:13) (Shotgun) T.Tagovailoa pass short right to D.Parker to BUF 23 for 8 yards (J.Poyer).
+  passResult=C  formation=SHOTGUN  coverage=Quarters  week=8
+  PIS=100.0 (geom=99.0, adj=+2)
+  clean_dist early=5.16 -> late=4.91 (min=4.81)  edge_min=5.13  int_min=4.81
+  window: snap=6 end=32 (pass, approx snap=False/end=False)
+  events: {'ball_snap': np.int64(6), 'play_action': np.int64(17), 'pass_forward': np.int64(32)}
+
+--- 2. GRADUAL COLLAPSE (still completed): game 2021092605 play 1820 ---
+  desc: (1:50) (Shotgun) J.Winston pass short middle to M.Callaway for 7 yards, TOUCHDOWN [K.Dugger]. Penalty on NE-J.Jones, Defensive Holding, declined.
+  passResult=C  formation=SHOTGUN  coverage=Cover-0  week=3
+  PIS=50.6 (geom=56.6, adj=-6)
+  clean_dist early=5.66 -> late=0.52 (min=0.07)  edge_min=3.14  int_min=0.07
+  window: snap=7 end=47 (pass, approx snap=False/end=False)
+  events: {'autoevent_ballsnap': np.int64(6), 'ball_snap': np.int64(7), 'play_action': np.int64(20), 'autoevent_passforward': np.int64(45), 'pass_forward': np.int64(47)}
+
+--- 3. SACK via interior collapse: game 2021091203 play 765 ---
+  desc: (2:23) (Shotgun) K.Cousins sacked at MIN 2 for -9 yards (L.Ogunjobi).
+  passResult=S  formation=SHOTGUN  coverage=Cover-3  week=1
+  PIS=34.0 (geom=50.0, adj=-16)
+  clean_dist early=4.27 -> late=0.59 (min=0.00)  edge_min=2.94  int_min=0.00
+  window: snap=6 end=58 (sack, approx snap=False/end=False)
+  events: {'ball_snap': np.int64(6), 'qb_sack': np.int64(58)}

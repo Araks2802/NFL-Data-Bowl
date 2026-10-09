@@ -1,0 +1,149 @@
+
+======================================================================
+GAMES  (games.csv)
+======================================================================
+rows: 122  cols: 7
+columns: ['gameId', 'season', 'week', 'gameDate', 'gameTimeEastern', 'homeTeamAbbr', 'visitorTeamAbbr']
+
+dtypes:
+  gameId                       int64      nulls=       0 (  0.0%)  nunique=122
+  season                       int64      nulls=       0 (  0.0%)  nunique=1
+  week                         int64      nulls=       0 (  0.0%)  nunique=8
+  gameDate                     object     nulls=       0 (  0.0%)  nunique=24
+  gameTimeEastern              object     nulls=       0 (  0.0%)  nunique=6
+  homeTeamAbbr                 object     nulls=       0 (  0.0%)  nunique=32
+  visitorTeamAbbr              object     nulls=       0 (  0.0%)  nunique=32
+weeks: [1, 2, 3, 4, 5, 6, 7, 8]
+teams (home): ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAX', 'KC', 'LA', 'LAC', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS']
+
+======================================================================
+PLAYERS  (players.csv)
+======================================================================
+rows: 1,679  cols: 7
+columns: ['nflId', 'height', 'weight', 'birthDate', 'collegeName', 'officialPosition', 'displayName']
+
+dtypes:
+  nflId                        int64      nulls=       0 (  0.0%)  nunique=1679
+  height                       object     nulls=       0 (  0.0%)  nunique=16
+  weight                       int64      nulls=       0 (  0.0%)  nunique=176
+  birthDate                    object     nulls=     232 ( 13.8%)  nunique=1174
+  collegeName                  object     nulls=     224 ( 13.3%)  nunique=236
+  officialPosition             object     nulls=       0 (  0.0%)  nunique=19
+  displayName                  object     nulls=       0 (  0.0%)  nunique=1671
+positions: {'WR': 210, 'CB': 192, 'DE': 142, 'OLB': 136, 'RB': 126, 'T': 122, 'TE': 121, 'DT': 114, 'G': 99, 'ILB': 81, 'FS': 72, 'SS': 69, 'QB': 60, 'C': 55, 'NT': 34, 'MLB': 27, 'FB': 15, 'LB': 2, 'DB': 2}
+
+======================================================================
+PLAYS  (plays.csv)
+======================================================================
+rows: 8,557  cols: 32
+columns: ['gameId', 'playId', 'playDescription', 'quarter', 'down', 'yardsToGo', 'possessionTeam', 'defensiveTeam', 'yardlineSide', 'yardlineNumber', 'gameClock', 'preSnapHomeScore', 'preSnapVisitorScore', 'passResult', 'penaltyYards', 'prePenaltyPlayResult', 'playResult', 'foulName1', 'foulNFLId1', 'foulName2', 'foulNFLId2', 'foulName3', 'foulNFLId3', 'absoluteYardlineNumber', 'offenseFormation', 'personnelO', 'defendersInBox', 'personnelD', 'dropBackType', 'pff_playAction', 'pff_passCoverage', 'pff_passCoverageType']
+
+dtypes:
+  gameId                       int64      nulls=       0 (  0.0%)  nunique=122
+  playId                       int64      nulls=       0 (  0.0%)  nunique=3762
+  playDescription              object     nulls=       0 (  0.0%)  nunique=8555
+  quarter                      int64      nulls=       0 (  0.0%)  nunique=5
+  down                         int64      nulls=       0 (  0.0%)  nunique=5
+  yardsToGo                    int64      nulls=       0 (  0.0%)  nunique=32
+  possessionTeam               object     nulls=       0 (  0.0%)  nunique=32
+  defensiveTeam                object     nulls=       0 (  0.0%)  nunique=32
+  yardlineSide                 object     nulls=     125 (  1.5%)  nunique=32
+  yardlineNumber               int64      nulls=       0 (  0.0%)  nunique=50
+  gameClock                    object     nulls=       0 (  0.0%)  nunique=898
+  preSnapHomeScore             int64      nulls=       0 (  0.0%)  nunique=42
+  preSnapVisitorScore          int64      nulls=       0 (  0.0%)  nunique=38
+  passResult                   object     nulls=       0 (  0.0%)  nunique=5
+  penaltyYards                 float64    nulls=    7801 ( 91.2%)  nunique=60
+  prePenaltyPlayResult         int64      nulls=       0 (  0.0%)  nunique=98
+  playResult                   int64      nulls=       0 (  0.0%)  nunique=102
+  foulName1                    object     nulls=    7821 ( 91.4%)  nunique=29
+  foulNFLId1                   float64    nulls=    7821 ( 91.4%)  nunique=486
+  foulName2                    object     nulls=    8527 ( 99.6%)  nunique=15
+  foulNFLId2                   float64    nulls=    8527 ( 99.6%)  nunique=30
+  foulName3                    object     nulls=    8556 (100.0%)  nunique=1
+  foulNFLId3                   float64    nulls=    8556 (100.0%)  nunique=1
+  absoluteYardlineNumber       float64    nulls=       1 (  0.0%)  nunique=99
+  offenseFormation             object     nulls=       7 (  0.1%)  nunique=7
+  personnelO                   object     nulls=       1 (  0.0%)  nunique=30
+  defendersInBox               float64    nulls=       7 (  0.1%)  nunique=11
+  personnelD                   object     nulls=       1 (  0.0%)  nunique=29
+  dropBackType                 object     nulls=     528 (  6.2%)  nunique=8
+  pff_playAction               int64      nulls=       0 (  0.0%)  nunique=2
+  pff_passCoverage             object     nulls=       0 (  0.0%)  nunique=12
+  pff_passCoverageType         object     nulls=       0 (  0.0%)  nunique=3
+
+passResult distribution:
+{'C': 4620, 'I': 2755, 'S': 543, 'R': 449, 'IN': 190}
+offenseFormation: {'SHOTGUN': 5481, 'EMPTY': 1396, 'SINGLEBACK': 1189, 'I_FORM': 298, 'PISTOL': 154, 'JUMBO': 30, nan: 7, 'WILDCAT': 2}
+dropBackType: {'TRADITIONAL': 6542, 'SCRAMBLE': 899, nan: 528, 'DESIGNED_ROLLOUT_RIGHT': 285, 'DESIGNED_ROLLOUT_LEFT': 149, 'SCRAMBLE_ROLLOUT_RIGHT': 125, 'SCRAMBLE_ROLLOUT_LEFT': 23, 'DESIGNED_RUN': 5, 'UNKNOWN': 1}
+pff_passCoverage: {'Cover-3': 2665, 'Cover-1': 2011, 'Cover-2': 1085, 'Quarters': 1033, 'Cover-6': 805, 'Red Zone': 376, 'Cover-0': 270, '2-Man': 200, 'Bracket': 47, 'Prevent': 32, 'Goal Line': 25, 'Miscellaneous': 8}
+pff_playAction: {0: 6519, 1: 2038}
+unique plays (gameId,playId): 8557
+
+======================================================================
+PFF SCOUTING  (pffScoutingData.csv)
+======================================================================
+rows: 188,254  cols: 15
+columns: ['gameId', 'playId', 'nflId', 'pff_role', 'pff_positionLinedUp', 'pff_hit', 'pff_hurry', 'pff_sack', 'pff_beatenByDefender', 'pff_hitAllowed', 'pff_hurryAllowed', 'pff_sackAllowed', 'pff_nflIdBlockedPlayer', 'pff_blockType', 'pff_backFieldBlock']
+
+dtypes:
+  gameId                       int64      nulls=       0 (  0.0%)  nunique=122
+  playId                       int64      nulls=       0 (  0.0%)  nunique=3762
+  nflId                        int64      nulls=       0 (  0.0%)  nunique=1679
+  pff_role                     object     nulls=       0 (  0.0%)  nunique=5
+  pff_positionLinedUp          object     nulls=       0 (  0.0%)  nunique=56
+  pff_hit                      float64    nulls=   94127 ( 50.0%)  nunique=2
+  pff_hurry                    float64    nulls=   94127 ( 50.0%)  nunique=2
+  pff_sack                     float64    nulls=   94127 ( 50.0%)  nunique=2
+  pff_beatenByDefender         float64    nulls=  140167 ( 74.5%)  nunique=2
+  pff_hitAllowed               float64    nulls=  140167 ( 74.5%)  nunique=2
+  pff_hurryAllowed             float64    nulls=  140167 ( 74.5%)  nunique=2
+  pff_sackAllowed              float64    nulls=  140167 ( 74.5%)  nunique=2
+  pff_nflIdBlockedPlayer       float64    nulls=  141728 ( 75.3%)  nunique=665
+  pff_blockType                object     nulls=  140350 ( 74.6%)  nunique=12
+  pff_backFieldBlock           float64    nulls=  140351 ( 74.6%)  nunique=2
+
+pff_role distribution:
+{'Coverage': 57765, 'Pass Block': 46057, 'Pass Route': 39513, 'Pass Rush': 36362, 'Pass': 8557}
+pff_positionLinedUp: {'QB': 8557, 'RG': 8557, 'C': 8557, 'LT': 8557, 'LG': 8557, 'RT': 8555, 'RCB': 8224, 'LCB': 8159, 'LWR': 8134, 'RWR': 8033, 'ROLB': 5325, 'LOLB': 5070, 'DRT': 4812, 'LEO': 4659, 'DLT': 4371, 'REO': 4287, 'LLB': 4202, 'FSL': 3793, 'FSR': 3764, 'RLB': 3627, 'SLWR': 3546, 'FS': 3512, 'RILB': 3490, 'SRWR': 3468, 'SCBR': 3422, 'LILB': 3336, 'SCBL': 3246, 'LE': 3204, 'HB-L': 2870, 'HB-R': 2676, 'RE': 2383, 'TE-R': 2241, 'SRoWR': 1820, 'SRiWR': 1820, 'SCBoL': 1690, 'TE-L': 1675, 'HB': 1624, 'MLB': 1595, 'SLiWR': 1432, 'SLoWR': 1432, 'SCBoR': 1342, 'NT': 1255, 'SCBiL': 1125, 'SCBiR': 906, 'SSL': 799, 'SSR': 758, 'NRT': 752, 'NLT': 593, 'TE-iR': 487, 'TE-oR': 487, 'SS': 424, 'TE-oL': 292, 'TE-iL': 292, 'FB-R': 176, 'FB': 147, 'FB-L': 137}
+pff_blockType: {nan: 140350, 'PP': 24697, 'PA': 6331, 'PT': 5906, 'SW': 3025, 'CL': 2595, 'CH': 1565, 'NB': 1352, 'PU': 886, 'SR': 501, 'BH': 443, 'UP': 308, 'PR': 295}
+  pff_hit: nonnull=94127  sum=843.0
+  pff_hurry: nonnull=94127  sum=2877.0
+  pff_sack: nonnull=94127  sum=602.0
+  pff_hitAllowed: nonnull=48087  sum=544.0
+  pff_hurryAllowed: nonnull=48087  sum=2083.0
+  pff_sackAllowed: nonnull=48087  sum=370.0
+  pff_beatenByDefender: nonnull=48087  sum=1944.0
+
+======================================================================
+TRACKING
+======================================================================
+num tracking files: 122
+sample file: tracking_2021090900.csv  rows: 92,644  cols: 16
+columns: ['gameId', 'playId', 'nflId', 'frameId', 'time', 'jerseyNumber', 'team', 'playDirection', 'x', 'y', 's', 'a', 'dis', 'o', 'dir', 'event']
+playDirection: {'right': 62031, 'left': 30613}
+football rows (nflId NA): 4028
+teams in tracking: {'TB': 44308, 'DAL': 44308, 'football': 4028}
+frames per play (sample):
+  min=24 median=37.0 max=177
+
+event vocabulary (first 5 files):
+  nan                            348128
+  ball_snap                        9131
+  pass_forward                     8349
+  autoevent_ballsnap               4278
+  autoevent_passforward            4048
+  play_action                      1564
+  qb_sack                           506
+  pass_arrived                      391
+  line_set                          276
+  autoevent_passinterrupted         253
+  run                               230
+  man_in_motion                     115
+  pass_outcome_incomplete           115
+  pass_tipped                       115
+  qb_strip_sack                      46
+  fumble                             23
+  fumble_offense_recovered           23
+  pass_outcome_caught                23
+  shift                              23
