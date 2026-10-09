@@ -1,0 +1,36 @@
+{
+  "clean": {
+    "gameId": 2021103101,
+    "playId": 338,
+    "narrative": "1. CLEAN POCKET (completion)",
+    "pis": 100.0,
+    "pis_geom": 99.0,
+    "end_kind": "pass",
+    "min_clean_dist": 4.81,
+    "early_clean": 5.16,
+    "late_clean": 4.91
+  },
+  "collapse": {
+    "gameId": 2021092605,
+    "playId": 1820,
+    "narrative": "2. GRADUAL COLLAPSE (still completed)",
+    "pis": 50.6,
+    "pis_geom": 56.6,
+    "end_kind": "pass",
+    "min_clean_dist": 0.07,
+    "early_clean": 5.66,
+    "late_clean": 0.52
+  },
+  "sack": {
+    "gameId": 2021091203,
+    "playId": 765,
+    "narrative": "3. SACK via interior collapse",
+    "pis": 34.0,
+    "pis_geom": 50.0,
+    "end_kind": "sack",
+    "min_clean_dist": 0.0,
+    "early_clean": 4.27,
+    "late_clean": 0.59,
+    "collapse_type": "interior"
+  }
+}
