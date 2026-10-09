@@ -1,0 +1,76 @@
+
+========================================================================
+1. SCORABILITY & APPROXIMATION COVERAGE
+========================================================================
+total plays scored        : 8,557
+scorable                  : 8,557 (100.0%)
+unscorable reasons        : {}
+snap approximated         : 24 (0.3%)
+end approximated          : 38 (0.4%)
+end_kind distribution     : {'pass': 7562, 'sack': 508, 'scramble': 449, 'approx_last': 38}
+
+========================================================================
+2. COMPONENT CORRELATION MATRIX (double-counting check)
+========================================================================
+            s_clean  s_press  s_collapse  s_closing  s_final
+s_clean        1.00     0.84        0.55       0.19     0.77
+s_press        0.84     1.00        0.31       0.19     0.81
+s_collapse     0.55     0.31        1.00       0.07     0.25
+s_closing      0.19     0.19        0.07       1.00     0.33
+s_final        0.77     0.81        0.25       0.33     1.00
+
+Interpretation: components should be positively but not perfectly
+correlated. |r|>0.9 would suggest redundancy.
+pairs with |r|>0.9: none (good)
+
+========================================================================
+3. PIS vs PFF-CREDITED PRESSURE (association)
+========================================================================
+Pearson  r(PIS, pressures allowed)  = -0.622
+Spearman r(PIS, pressures allowed)  = -0.639
+Expect NEGATIVE: higher PIS -> fewer pressures allowed.
+Spearman r(PIS_geom_only, pressures)= -0.512  (geometry alone, no outcome adjustment)
+
+========================================================================
+4. OUTCOME RATES BY PIS BAND (monotonicity)
+========================================================================
+              n  mean_pis  sack_rate  pressure_rate  mean_pressures
+pis                                                                
+(0, 40]     152    35.885      0.974          0.868           1.355
+(40, 55]    443    48.121      0.686          0.808           1.034
+(55, 70]   1173    64.320      0.073          0.723           0.889
+(70, 85]   3051    78.485      0.002          0.357           0.404
+(85, 100]  3738    90.932      0.000          0.015           0.016
+
+Expect sack_rate and pressure_rate to FALL as PIS band rises.
+
+========================================================================
+5. SENSITIVITY TO PROXIMITY RADIUS R (recompute on sample)
+========================================================================
+R=1.5: mean PIS= 81.6  rank corr vs default R=2.0: rho=0.991
+R=2.0: mean PIS= 79.4  rank corr vs default R=2.0: rho=1.000
+R=2.5: mean PIS= 75.8  rank corr vs default R=2.0: rho=0.984
+R=3.0: mean PIS= 71.3  rank corr vs default R=2.0: rho=0.984
+
+========================================================================
+5b. SENSITIVITY TO COMPONENT WEIGHTS
+========================================================================
+     default: mean PIS= 79.4  rank corr vs default rho=1.000
+ clean-heavy: mean PIS= 84.8  rank corr vs default rho=0.990
+       equal: mean PIS= 77.6  rank corr vs default rho=0.998
+
+========================================================================
+6. HELD-OUT RANK STABILITY (wk1-6 vs wk7-8, game-grouped)
+========================================================================
+PPPR rank stability: n=160 players in both halves, Spearman rho(early, late) = 0.267
+
+========================================================================
+7. PLAYER RANKING SAMPLE SIZES & UNCERTAINTY
+========================================================================
+PPPR qualified players (>= 50 snaps): 219
+PCR  qualified players (>= 50 snaps): 250
+PPPR snaps: min=51 median=211 max=325  mean bootstrap_sd=1.11
+PCR  snaps: min=50 median=118 max=261  mean bootstrap_sd=1.57
+
+NOTE: correlations are evidence of ASSOCIATION, not causation or
+proof of out-of-sample predictive power.
